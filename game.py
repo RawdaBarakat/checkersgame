@@ -59,7 +59,7 @@ class Game:
             pygame.draw.circle(self.win, BLUE,
                                (col * SQUARE_SIZE + SQUARE_SIZE // 2, row * SQUARE_SIZE + SQUARE_SIZE // 2), 15)
 
-    def change_turn(self):
+    def netx_turn(self):
         self.valid_moves = {}
         if self.turn == RED:
             self.turn = WHITE
@@ -71,4 +71,4 @@ class Game:
 
     def ai_move(self, board):
         self.board = board
-        self.change_turn()
+        self.netx_turn()
